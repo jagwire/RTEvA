@@ -1,3 +1,6 @@
 [submodule "externals/TEvA"]
 	path = externals/TEvA
 	url = git://github.com/jintrone/TEvA.git
+[submodule "externals/TEvA4R"]
+	path = externals/TEvA4R
+	url = git://github.com/jagwire/TEvA4R.git
