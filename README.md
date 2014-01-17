@@ -14,3 +14,5 @@ Building, Checking, and Installing
 * Inside R, issue the following command:
 
 install.packages('Path:\\To\\RTEvA\\RTEvA_1.0.tar.gz', repos=NULL, type='Source');
+
+* Lastly, don't forget to issue: library(RTEvA)
