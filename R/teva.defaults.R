@@ -27,7 +27,8 @@ defaults$working_directory<-"./work"
 defaults$overwrite_existing_networks<-FALSE
 defaults$overwrite_existing_analyses<-FALSE
 
-
+#We set this option so when we take our larger numbers, its in expanded form and not notated
+options("scipen"=100, "digits"=4)
 
 teva.go <- function() {
    message("Welcome to RTEvA.");
@@ -48,7 +49,7 @@ teva.go <- function() {
    csv_data = readChar(csv_path, file.info(csv_path)$size);
  
    message(csv_data);
-   readline("");
+
    teva.networks(csv_data);
    
    
