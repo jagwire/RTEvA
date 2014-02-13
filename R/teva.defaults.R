@@ -28,7 +28,12 @@ defaults$overwrite_existing_networks<-FALSE
 defaults$overwrite_existing_analyses<-FALSE
 
 #We set this option so when we take our larger numbers, its in expanded form and not notated
-options("scipen"=100, "digits"=4)
+teva.setOptions <- function() {
+   options("scipen"=100, "digits"=4)
+}
+
+teva.setOptions();
+
 
 teva.go <- function() {
    message("Welcome to RTEvA.");
