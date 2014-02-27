@@ -32,10 +32,10 @@ teva.setOptions <- function() {
    options("scipen"=100, "digits"=4)
 }
 
-teva.setOptions();
 
+teva.e2e <- function() {
+   teva.setOptions();
 
-teva.go <- function() {
    message("Welcome to RTEvA.");
    message("Press enter to choose your cfinder license.");
    readline("");
@@ -55,8 +55,10 @@ teva.go <- function() {
  
    message(csv_data);
 
-   teva.networks(csv_data);
+   networks <- teva.networks(csv_data);
    
+   message("Press enter to evolve networks data");
+   topic_model <- teva.evolve(networks);
    
    
 }
@@ -64,6 +66,9 @@ teva.go <- function() {
 
 teva.defaults <-
 function(a, ...) {
+ teva.setOptions();
+
+ 
  a_s <- as.list(sys.call());
 
  my.secret.variable <- 31337
@@ -74,4 +79,8 @@ function(a, ...) {
    }
  }
 
+}
+
+TEVA <- function() {
+  return (.jnew("edu/missouri/teva/TEvA"));
 }
