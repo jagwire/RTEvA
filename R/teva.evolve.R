@@ -3,11 +3,11 @@ teva.evolve <- function(networks) {
  obj <- TEVA();
  dto <- obj$evolve(teva.networks.toJArray(networks), hash.asCSV(defaults));
  output = hash(list(""));
- message("WE SURVIVED EVOLUTION!");
+
  output[["spawners"]] <- dto$getSpawns();
  output[["consumers"]] <- dto$getConsumes();
  output[["informers"]] <- dto$getInforms();
- 
+ output[["windows"]] <- dto$getWindows();
 
  return(output);
 }
