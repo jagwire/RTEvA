@@ -1,13 +1,12 @@
 teva.evolve <- function(networks) {
  message("evolving!");  
  obj <- TEVA();
- #dto <- .jcall(obj,"Ledu/missouri/teva/TopicModelDTO", "evolve", teva.networks.toCSV(networks), hash.asCSV(defaults)); 
- dto <- obj$evolve(teva.networks.toCSV(networks), hash.asCSV(defaults));
- ouput = hash(list(""));
- 
- #output[["spawners"]] <- within(dto,getSpawns());
- #output[["consumers"]] <- within(dto, getConsumes());
- #output[["informers"]] <- within(dto, getInforms());
+ dto <- obj$evolve(teva.networks.toJArray(networks), hash.asCSV(defaults));
+ output = hash(list(""));
+ message("WE SURVIVED EVOLUTION!");
+ output[["spawners"]] <- dto$getSpawns();
+ output[["consumers"]] <- dto$getConsumes();
+ output[["informers"]] <- dto$getInforms();
  
 
  return(output);
@@ -15,7 +14,8 @@ teva.evolve <- function(networks) {
 
 teva.evolve.e2e <- function() {
   nets <- teva.networks.e2e();
-  nets.as.csv <- teva.networks.toCSV2(nets);
+  nets.as.csv <- teva.networks.toJArray(nets);
   teva <- TEVA();
-  teva$evolve(nets.as.csv, hash.asCSV(defaults));
+  topic_model <- teva$evolve(nets.as.csv, hash.asCSV(defaults));
+  return(topic_model);
 }

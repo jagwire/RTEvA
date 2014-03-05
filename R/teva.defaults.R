@@ -26,6 +26,10 @@ defaults$wordij_tuple_size<-2
 defaults$working_directory<-"./work"
 defaults$overwrite_existing_networks<-FALSE
 defaults$overwrite_existing_analyses<-FALSE
+defaults$cos_executable<-"/Users/Ryan/Development/cosparallel/cos"
+defaults$cos_max_cliques_executable="/Users/Ryan/Development/cosparallel/extras/maximal_cliques"
+
+
 
 #We set this option so when we take our larger numbers, its in expanded form and not notated
 teva.setOptions <- function() {
