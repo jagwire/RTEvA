@@ -8,7 +8,7 @@ teva.evolve <- function(networks) {
  output[["consumers"]] <- dto$getConsumes();
  output[["informers"]] <- dto$getInforms();
  output[["windows"]] <- dto$getWindows();
-
+ output[["internal"]] <- dto;
  return(output);
 }
 
