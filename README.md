@@ -24,3 +24,4 @@ LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/
 install.packages('Path:\\To\\RTEvA\\RTEvA_1.0.tar.gz', repos=NULL, type='Source');
 
 * Lastly, don't forget to issue: library(RTEvA)
+
