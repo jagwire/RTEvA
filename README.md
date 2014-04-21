@@ -39,18 +39,18 @@ Dependencies:
 
 To Install igraph:
 
-1) Download source code here: http://sourceforge.net/projects/igraph/files/C%20library/0.6.5/igraph-0.6.5.tar.gz/download
-2) Extract to Desktop
-3) Open Terminal to extracted directory
-4) ./configure
-5) make
-6) sudo make install
+1. Download source code here: http://sourceforge.net/projects/igraph/files/C%20library/0.6.5/igraph-0.6.5.tar.gz/download
+2. Extract to Desktop
+3. Open Terminal to extracted directory
+4. ./configure
+5. make
+6. sudo make install
 
 To Install Cos Parallel Library:
-1) svn checkout http://svn.code.sf.net/p/cosparallel/code/trunk cosparallel
-2) ./configure; make
-3) cd extras/
-4) make
+1. svn checkout http://svn.code.sf.net/p/cosparallel/code/trunk cosparallel
+2. ./configure; make
+3. cd extras/
+4. make
 
 
 RJava needs to be installed, from source, with the proper JDK. This will get tricky.
