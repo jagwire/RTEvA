@@ -46,6 +46,7 @@ To Install igraph:
 5. make
 6. sudo make install
 
+
 To Install Cos Parallel Library:
 1. svn checkout http://svn.code.sf.net/p/cosparallel/code/trunk cosparallel
 2. ./configure; make
