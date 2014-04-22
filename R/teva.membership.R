@@ -1,3 +1,9 @@
+teva.membership <- function(dataAsCSV, topic_model) {
+    teva <- TEVA();
+    output <- teva$membership(data, hash.asCSV(defaults), topic_model[["internal"]]);
+    return(output);
+}
+
 teva.membership.e2e <- function() {
     teva.setOptions();
     csv_path <- "/Users/Ryan/MM15.csv";
