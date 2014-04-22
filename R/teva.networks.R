@@ -1,10 +1,11 @@
 teva.networks <-
 function(csvdata) {
 
- .teva <- .jnew("edu/missouri/teva/TEvA");
-  raws <- .jcall(.teva, "[S","networks", csvdata, hash.asCSV(defaults));
+# .teva <- .jnew("edu/missouri/teva/TEvA");
+#  raws <- .jcall(.teva, "[S","networks", csvdata, hash.asCSV(defaults));
 
-
+  teva <- TEVA();
+  raws <- teva$networks(csvdata, hash.asCSV(defaults));
   #get column names
   cols <- names(read.csv(text=raws[1]));
   
