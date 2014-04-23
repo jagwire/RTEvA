@@ -12,22 +12,22 @@
 - Make
 - wget
 
-### Install igraph
+### Install igraph (needed for Cos Parallel)
 1. download source code: http://sourceforge.net/projects/igraph/files/C%20library/0.6.5/igraph-0.6.5.tar.gz/download
 2. Extract to desktop
 3. Open terminal to extracted directory
 4. ./configure
 5. make
-6 sudo make install
+6. sudo make install
 
-### Install cos parallel 
+### Install Cos Parallel (needed to generate networks from conversation data)
 1. checkout source code: http://svn.code.sf.net/p/cosparallel/code/trunk
 2. enter directory of checked out source code
 3. ./configure ; make
 4. cd extras
 5. make
 
-### Installing rJava
+### Installing rJava (needed to call Java bytecode from R)
 1. set JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre 
 2. set JAVA_LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server 
 3. set JAVA_LIBS='-L/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server -ljvm' 
@@ -39,7 +39,7 @@
 9. start JVM: .jinit()
 10. Verify correct JDK usage via: J(“java.lang.System”)$getProperty(“java.version”);
 
-### Installing RTEvA
+### Installing RTEvA (The package where the magic happens)
 1. Download  repository
 2. change directory to repository directory
 3. R CMD build RTEvA
@@ -48,11 +48,11 @@
 6. install.packages(“/path/to/rteva_1.0.tar.gz”, type=“source”, repos=NULL);
 7. load rteva: library(RTEvA)
 
-### Setting defaults to point to Cos algorithm
+### Setting defaults to point to Cos algorithm (Tell RTEvA where to look for Cos)
 1. teva.defaults(cos_executable=“/path/to/cos”)
 2. teva.defaults(cos_max_cliques_executable=“/path/to/cos/extras/maximal_cliques”)
 
-## BEST PRACTICES
+## BEST PRACTICES (Making life easier)
 * Create shell script to automatically open rstudio as above, for example (rstudio.sh):
 
 ```Shell
