@@ -12,7 +12,7 @@
 - Make
 - wget
 
-### Install igraph (needed for Cos Parallel)
+### Install igraph <h6>(needed for Cos Parallel)</h6>
 1. download source code: http://sourceforge.net/projects/igraph/files/C%20library/0.6.5/igraph-0.6.5.tar.gz/download
 2. Extract to desktop
 3. Open terminal to extracted directory
@@ -20,14 +20,14 @@
 5. make
 6. sudo make install
 
-<h3>Install Cos Parallel</h3> <h6>(needed to generate networks from conversation data)</h6>
+### Install Cos Parallel<h6>(needed to generate networks from conversation data)</h6>
 1. checkout source code: http://svn.code.sf.net/p/cosparallel/code/trunk
 2. enter directory of checked out source code
 3. ./configure ; make
 4. cd extras
 5. make
 
-### Installing rJava (needed to call Java bytecode from R)
+### Installing rJava <h6>(needed to call Java bytecode from R)</h6>
 1. set JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre 
 2. set JAVA_LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server 
 3. set JAVA_LIBS='-L/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server -ljvm' 
@@ -39,7 +39,7 @@
 9. start JVM: .jinit()
 10. Verify correct JDK usage via: J(“java.lang.System”)$getProperty(“java.version”);
 
-### Installing RTEvA (The package where the magic happens)
+### Installing RTEvA <h6>(The package where the magic happens)</h6>
 1. Download  repository
 2. change directory to repository directory
 3. R CMD build RTEvA
@@ -48,11 +48,11 @@
 6. install.packages(“/path/to/rteva_1.0.tar.gz”, type=“source”, repos=NULL);
 7. load rteva: library(RTEvA)
 
-### Setting defaults to point to Cos algorithm (Tell RTEvA where to look for Cos)
+### Setting defaults to point to Cos algorithm <h6>(Tell RTEvA where to look for Cos)</h6>
 1. teva.defaults(cos_executable=“/path/to/cos”)
 2. teva.defaults(cos_max_cliques_executable=“/path/to/cos/extras/maximal_cliques”)
 
-## BEST PRACTICES (Making life easier)
+## BEST PRACTICES <h6>(Making life easier)</h6>
 * Create shell script to automatically open rstudio as above, for example (rstudio.sh):
 
 ```Shell
