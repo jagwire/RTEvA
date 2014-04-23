@@ -69,13 +69,28 @@ export JAVA_CPPFLAGS='-I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Conten
 
 ## FUNCTIONS
 ### teva.setOptions();
-### teva.list.defaults();
-### teva.defaults();
-### teva.networks();
-### teva.evolve();
-### teva.membership();
-### topic_graph();
+This largely exists as a workaround to RStudio using scientific notation for long numbers by default
 
+### teva.list.defaults();
+Lists the names of properties one can set with the function below
+
+### teva.defaults();
+Used to set default properties RTEvA uses.
+
+### teva.networks();
+Generates networks from csv_data. Requires raw csv text to be passed
+
+### teva.evolve();
+Generates a topic model from networks. Requires list of edge lists as input.
+
+### teva.membership();
+
+
+### topic_graph();
+Generates graphml document from topic_model passed from teva.evolve(). Requires topic model and desired filename.
+
+### get.raw.csv
+Read file contents into single string. Requires filepath to be passed as argument. Typically used as convenience method with teva.networks()
 
 
 Building, Checking, and Installing
