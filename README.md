@@ -20,7 +20,7 @@
 5. make
 6. sudo make install
 
-### Install Cos Parallel (needed to generate networks from conversation data)
+### Install Cos Parallel <h6>(needed to generate networks from conversation data)</h6>
 1. checkout source code: http://svn.code.sf.net/p/cosparallel/code/trunk
 2. enter directory of checked out source code
 3. ./configure ; make
