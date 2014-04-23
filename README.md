@@ -1,10 +1,8 @@
 #RTEvA
-=====
-
 
 ## PREREQUISITES
-JDK 1.7+ (Tested on update 55)
-RStudio
+- JDK 1.7+ (Tested on update 55)
+- RStudio
 
 ## GETTING STARTED
 ### Install Mac Dev Tools
