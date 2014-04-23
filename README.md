@@ -1,8 +1,8 @@
-RTEvA
+#RTEvA
 =====
 
 
-# PREREQUISITES
+## PREREQUISITES
 JDK 1.7+ (Tested on update 55)
 RStudio
 
@@ -54,7 +54,7 @@ RStudio
 1. teva.defaults(cos_executable=“/path/to/cos”)
 2. teva.defaults(cos_max_cliques_executable=“/path/to/cos/extras/maximal_cliques”)
 
-# BEST PRACTICES
+## BEST PRACTICES
 * Create shell script to automatically open rstudio as above, for example (rstudio.sh):
 
 ```Shell
@@ -63,14 +63,14 @@ LD_LIBRARY_PATH=…: open -a rstudio
 ```
 
 
-# FUNCTIONS
-## teva.setOptions();
-## teva.list.defaults();
-## teva.defaults();
-## teva.networks();
-## teva.evolve();
-## teva.membership();
-## topic_graph();
+## FUNCTIONS
+### teva.setOptions();
+### teva.list.defaults();
+### teva.defaults();
+### teva.networks();
+### teva.evolve();
+### teva.membership();
+### topic_graph();
 
 
 
