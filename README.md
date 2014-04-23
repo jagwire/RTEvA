@@ -1,6 +1,80 @@
 RTEvA
 =====
 
+
+# PREREQUISITES
+JDK 1.7+ (Tested on update 55)
+RStudio
+
+# GETTING STARTED
+## Install Mac Dev Tools
+- Git
+- Subversion
+- ant
+- Make
+- wget
+
+## install igraph
+1. download source code:
+2. Extract to desktop
+3. Open terminal to extracted directory
+4. ./configure
+5. make
+6 sudo make install
+
+## install cos parallel 
+1. checkout source code:
+2. enter directory of checked out source code
+3. ./configure l make
+4. cd extras
+5. make
+
+## installing rJava
+1. set JAVA_HOME
+2. set JAVA_LD_LIBRARY_PATH
+3. set JAVA_LIBS
+4. set JAVA_CPPFLAGS
+5. call: sudo R CMD javareconf
+6. open RStudio with LD_LIBRARY_PATH= …: open -a rstudio
+7. In RStudio, call: install.packages(‘rJava’, type=‘source’);
+8. load rJava
+9. start JVM: .jinit()
+10. Verify correct JDK usage via: J(“java.lang.System”)$getProperty(“java.version”);
+
+## Installing RTEvA
+1. Download  repository
+2. change directory to repository directory
+3. R CMD build RTEvA
+4. R CMD check RTEvA_1.0.tar.gz
+5. Open RStudio with LD_LIBRARY_PATH=…: open -a rstudio
+6. install.packages(“/path/to/rteva_1.0.tar.gz”, type=“source”, repos=NULL);
+7. load rteva: library(RTEvA)
+
+## Setting defaults to point to Cos algorithm
+1. teva.defaults(cos_executable=“/path/to/cos”)
+2. teva.defaults(cos_max_cliques_executable=“/path/to/cos/extras/maximal_cliques”)
+
+# BEST PRACTICES
+* Create shell script to automatically open rstudio as above, for example (rstudio.sh):
+
+#!/bin/sh
+LD_LIBRARY_PATH=…: open -a rstudio
+
+
+
+# FUNCTIONS
+## teva.setOptions();
+## teva.list.defaults();
+## teva.defaults();
+## teva.networks();
+## teva.evolve();
+## teva.membership();
+## topic_graph();
+
+
+
+
+
 Integration of TEvA project into R
 
 
