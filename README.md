@@ -59,7 +59,13 @@
 #!/bin/sh
 LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server: open -a rstudio
 ```
-
+* set JAVA_HOME, JAVA_LD_LIBRARY_PATH, JAVA_LIBS, and JAVA_CPPFLAGS in .profile or such:
+```shell
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre
+export JAVA_LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server
+export JAVA_LIBS='-L/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server -ljvm'
+export JAVA_CPPFLAGS='-I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/include -I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/include/darwin'
+```
 
 ## FUNCTIONS
 ### teva.setOptions();
