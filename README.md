@@ -12,26 +12,26 @@
 - Make
 - wget
 
-### install igraph
-1. download source code:
+### Install igraph
+1. download source code: http://sourceforge.net/projects/igraph/files/C%20library/0.6.5/igraph-0.6.5.tar.gz/download
 2. Extract to desktop
 3. Open terminal to extracted directory
 4. ./configure
 5. make
 6 sudo make install
 
-### install cos parallel 
-1. checkout source code:
+### Install cos parallel 
+1. checkout source code: http://svn.code.sf.net/p/cosparallel/code/trunk
 2. enter directory of checked out source code
-3. ./configure l make
+3. ./configure ; make
 4. cd extras
 5. make
 
-### installing rJava
-1. set JAVA_HOME
-2. set JAVA_LD_LIBRARY_PATH
-3. set JAVA_LIBS
-4. set JAVA_CPPFLAGS
+### Installing rJava
+1. set JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre 
+2. set JAVA_LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server 
+3. set JAVA_LIBS='-L/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server -ljvm' 
+4. set JAVA_CPPFLAGS='-I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/include -I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/include/darwin'
 5. call: sudo R CMD javareconf
 6. open RStudio with LD_LIBRARY_PATH= …: open -a rstudio
 7. In RStudio, call: install.packages(‘rJava’, type=‘source’);
@@ -44,7 +44,7 @@
 2. change directory to repository directory
 3. R CMD build RTEvA
 4. R CMD check RTEvA_1.0.tar.gz
-5. Open RStudio with LD_LIBRARY_PATH=…: open -a rstudio
+5. Open RStudio with LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server: open -a rstudio
 6. install.packages(“/path/to/rteva_1.0.tar.gz”, type=“source”, repos=NULL);
 7. load rteva: library(RTEvA)
 
@@ -57,7 +57,7 @@
 
 ```Shell
 #!/bin/sh
-LD_LIBRARY_PATH=…: open -a rstudio
+LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server: open -a rstudio
 ```
 
 
