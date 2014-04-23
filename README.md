@@ -33,7 +33,7 @@
 3. set JAVA_LIBS='-L/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server -ljvm' 
 4. set JAVA_CPPFLAGS='-I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/include -I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/include/darwin'
 5. call: sudo R CMD javareconf
-6. open RStudio with LD_LIBRARY_PATH= …: open -a rstudio
+6. open RStudio with LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server: open -a rstudio
 7. In RStudio, call: install.packages(‘rJava’, type=‘source’);
 8. load rJava
 9. start JVM: .jinit()
