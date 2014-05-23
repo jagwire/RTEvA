@@ -18,15 +18,29 @@
 3. set JAVA_LIBS='-L/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server -ljvm' 
 4. set JAVA_CPPFLAGS='-I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/include -I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/include/darwin'
 5. call: sudo R CMD javareconf
-6. unset JAVA_HOME
-7. open RStudio with LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server: open -a rstudio
-8. In RStudio, call: install.packages(‘rJava’, type=‘source’);
-9. load rJava
-10. start JVM: .jinit()
-11. Verify correct JDK usage via: J(“java.lang.System”)$getProperty(“java.version”);
+6. set JAVA_HOME, JAVA_LD_LIBRARY_PATH, JAVA_LIBS, and JAVA_CPPFLAGS in .bash_profile:
+   * go to root folder (cd ~)
+   * touch .bash_profile
+   * open -e .bash_profile
+   * include the following enviroment variables:
+   ```shell
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre
+export JAVA_LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server
+export JAVA_LIBS='-L/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server -ljvm'
+export JAVA_CPPFLAGS='-I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/include -I/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/include/darwin'
+   ```
+   * save and exit
+   * . .bash_profile
+7. unset JAVA_HOME
+8. open RStudio with LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/server: open -a rstudio
+9. In RStudio, call: install.packages(‘rJava’, type=‘source’);
+10. load rJava
+11. start JVM: .jinit()
+12. Verify correct JDK usage via: J(“java.lang.System”)$getProperty(“java.version”);
 <h6>
 It's important to note that upon running .jinit(); RStudio might crash, and Mac OS X will prompt you to install Java SE 6. *sigh* Go ahead and install Java SE 6 from this prompt and retry loading RStudio. RStudio will retain the rJava installation, and you should be able to start the JVM without crashes.
 </h6>
+
 ### Install igraph <h6>(needed for Cos Parallel)</h6>
 1. download source code: http://sourceforge.net/projects/igraph/files/C%20library/0.6.5/igraph-0.6.5.tar.gz/download
 2. Extract to desktop
